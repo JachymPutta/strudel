@@ -333,6 +333,9 @@ export class StrudelMirror {
     const changes = { from: 0, to: this.editor.state.doc.length, insert: code };
     this.editor.dispatch({ changes });
   }
+  getCode() {
+    return this.code.toString();
+  }
   clear() {
     this.onStartRepl && document.removeEventListener('start-repl', this.onStartRepl);
   }
